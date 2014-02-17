@@ -1,0 +1,151 @@
+import java.util.ArrayList;
+import java.io.;
+
+class Computer
+{
+   private string fName;
+   private string lName;
+   private string computerName;
+   
+   private string cpu;
+   private string mobo;
+   private string psu;
+   private string storage;
+   private string chassis;
+   private string odd;
+   private List<String> peripheral;
+   
+   private List<float> cost;
+
+   Console console = System.console();
+   String input;
+  
+   Computer()
+   {
+      cpu = null;
+      mobo = null;
+      psu = null;
+      storage = null;
+      chassis = null;
+      odd = null;
+      peripheral = new ArrayList<String>();
+      
+      cost = new ArrayList<float>();
+   }
+   
+   string getCpu()
+   {
+      return cpu;
+   }
+
+   string getMobo()
+   {
+      return mobo;
+   }
+
+   string getPsu()
+   {
+      return psu;
+   }
+
+   string getStorage()
+   {
+      return storage;
+   }
+
+   string getChassis()
+   {
+      return chassis;
+   }
+
+   string getOdd()
+   {
+      return odd;
+   }
+
+   string getPeripheral(int i)
+   {
+      return peripheral[i];
+   }
+   
+   int getCost(int i)
+   {
+      return cost[i];
+   }
+
+   void setCpu()
+   {
+      cpu = console.readLine("Which CPU?");
+   }
+
+   void setMobo()
+   {
+      mobo = console.readLine("Which motherboard?");
+   }
+
+   void setPsu()
+   {
+      psu = console.readLine("Which power supply?");
+   }
+
+   void setStorage()
+   {
+      storage = console.readLine("What storage device?");      
+   }
+
+   void setChassis()
+   {
+      chassis = console.readLine("What case?");
+   }
+
+   void setOdd()
+   {
+      odd = console.readLine("What optical drive?");
+   }
+
+   void setPeripheral()
+   {
+      
+      while(console.readLine("Would you like to add a peripheral?")
+            == ("y"||"Y"))
+      {
+         peripheral = console.readLine("What peripheral?");
+         peripheral.add(peripheral);
+      }
+   }
+   void setCost()
+   {
+      float amount = console.readLine("How much does it cost?");
+      cost.add(amount);
+   }
+
+   void prompt()
+   {
+      setCpu();
+      setMobo();
+      setPsu();
+      setStorage();
+      setChassis();
+      setOdd();
+      setPeripheral();
+   }
+
+   void displayScreen()
+   {
+      
+   }
+
+   void writeFile()
+   {
+
+   }
+}  
+void run()
+   {
+      return;
+   }
+
+int main
+{
+   run();
+}
